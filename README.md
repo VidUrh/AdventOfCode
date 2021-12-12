@@ -1,5 +1,5 @@
 # AdventOfCode
 
-Moje rešitve tekmovanja AdventOfCode
-###################################
-AOC handle: Vid Urh
+## Moje rešitve tekmovanja AdventOfCode
+
+## AOC handle: Vid Urh
