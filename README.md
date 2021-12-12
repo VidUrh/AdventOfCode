@@ -1,4 +1,5 @@
 # AdventOfCode
 
 Moje rešitve tekmovanja AdventOfCode
-Ime: Vid Urh
+###################################
+AOC handle: Vid Urh
