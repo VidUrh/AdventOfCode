@@ -10,6 +10,37 @@ for x in lines:
 	graph[a].append(b)
 	graph[b].append(a)
 visited = {x:0 for x in graph.keys() if x==x.lower()}
+
+ans=set()
+def dfs1(root,visited,path):
+	if root=='end':
+		if len([x for x in visited.values() if x>=2])==0:
+			ans.add(tuple(path))
+		return
+	elif root in visited and visited[root]==1 and root=='start':
+		return
+	elif (root in visited and visited[root]==2) or len([x for x in visited.values() if x==2])>1:
+		return
+	else:
+		if(root==root.lower()):
+			visited[root]+=1
+		for x in graph[root]:
+			dfs1(x,visited,path+[x])
+		if(root==root.lower()):
+			visited[root]-=1
+	return
+dfs1('start',visited,['start'])
+print("Part-1: "+str(len(ans)))
+
+
+
+
+
+
+
+
+
+
 ans=set()
 def dfs(root,visited,path):
 	if root=='end':
@@ -29,4 +60,4 @@ def dfs(root,visited,path):
 			visited[root]-=1
 	return
 dfs('start',visited,['start'])
-print(len(ans))
+print("Part-2: "+str(len(ans)))
